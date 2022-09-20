@@ -1,3 +1,4 @@
+"use strict";
 const req = new XMLHttpRequest();
 
 req.addEventListener("readystatechange", (e) => {
@@ -7,9 +8,12 @@ req.addEventListener("readystatechange", (e) => {
   }
 });
 
+// get today date
+const date = new Date();
+
 req.open(
   "get",
-  "http://api.aladhan.com/v1/calendarByCity?city=ta'if%27if&country=sa&method=2&month=04&year=2017"
+  `http://api.aladhan.com/v1/calendarByCity?city=ta'if%27if&country=sa&method=${date.getDate}&month=${date.getMonth}&year=${date.getFullYear}`
 );
 req.send();
 
