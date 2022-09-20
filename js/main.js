@@ -1,15 +1,13 @@
 "use strict";
 const req = new XMLHttpRequest();
+// get today date
+const date = new Date();
 
 req.addEventListener("readystatechange", (e) => {
   if (e.target.readyState === 4) {
     const data = JSON.parse(e.target.responseText);
-    console.log(data);
   }
 });
-
-// get today date
-const date = new Date();
 
 req.open(
   "get",
