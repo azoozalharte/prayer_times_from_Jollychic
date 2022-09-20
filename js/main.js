@@ -4,12 +4,12 @@ const req = new XMLHttpRequest();
 const date = moment();
 
 req.addEventListener("readystatechange", (e) => {
-  if (e.target.readyState === 4) {
+  if (e.target.readyState === 4 && e.target.status === 200) {
+    // console.log(e.target);
     const data = JSON.parse(e.target.responseText);
     const getTodayPrayers = data.data.filter(
       (prayer) => prayer.date.readable.split(" ")[0] === date.date().toString()
     );
-    console.log(getTodayPrayers);
   }
 });
 req.open(
