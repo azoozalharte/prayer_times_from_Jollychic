@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* card header */
+.card-header {
+  @apply flex flex-col items-center gap-5 py-10 px-20 bg-[#eb524a] relative;
+}
+
+.city-name {
+  @apply font-bold text-xl;
+}
+
+.time {
+  @apply font-extrabold text-6xl mb-5;
+}
+.ui-date {
+  @apply font-extralight text-lg absolute bottom-2;
+}
+
+/* card prayer */
+.prayer-card {
+  @apply flex gap-4 py-10 px-32 bg-gray-300;
+}
+
+.prayer-content {
+  @apply font-bold text-3xl text-black;
+}
