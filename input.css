@@ -20,7 +20,7 @@
 
 /* card prayer */
 .prayer-card {
-  @apply flex gap-4 py-10 px-32 bg-gray-300;
+  @apply flex justify-center items-center gap-4 py-10 px-32 bg-gray-300 border-b-2 border-[#eb524a] last:border-none;
 }
 
 .prayer-content {
