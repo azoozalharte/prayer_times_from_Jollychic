@@ -4,25 +4,25 @@
 
 /* card header */
 .card-header {
-  @apply flex flex-col items-center gap-5 py-10 px-20 bg-[#eb524a] relative;
+  @apply flex flex-col items-center gap-5 py-4 px-7 md:py-10 md:px-20 bg-[#eb524a] relative;
 }
 
 .city-name {
-  @apply font-extrabold text-7xl text-white;
+  @apply font-extrabold text-4xl md:text-7xl text-white;
 }
 
 .time {
-  @apply font-extrabold text-6xl mb-5;
+  @apply font-extrabold text-3xl md:text-6xl mb-5;
 }
 .ui-date {
-  @apply font-extralight text-lg absolute bottom-2;
+  @apply font-extralight text-base md:text-lg absolute bottom-2;
 }
 
 /* card prayer */
 .prayer-card {
-  @apply flex justify-center items-center gap-4 py-10 px-32 bg-gray-300 border-b-2 border-[#eb524a] last:border-none;
+  @apply flex justify-center items-center gap-4 py-4 px-7 md:py-10 md:px-32 bg-gray-300 border-b-2 border-[#eb524a] last:border-none;
 }
 
 .prayer-content {
-  @apply font-bold text-3xl text-black;
+  @apply font-bold text-xl md:text-3xl text-black;
 }

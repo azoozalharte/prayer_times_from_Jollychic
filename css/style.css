@@ -597,33 +597,63 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(235 82 74 / var(--tw-bg-opacity));
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .card-header {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
 
 .city-name {
-  font-size: 4.5rem;
-  line-height: 1;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
   font-weight: 800;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 768px) {
+  .city-name {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+
 .time {
   margin-bottom: 1.25rem;
-  font-size: 3.75rem;
-  line-height: 1;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .time {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
 
 .ui-date {
   position: absolute;
   bottom: 0.5rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 200;
+}
+
+@media (min-width: 768px) {
+  .ui-date {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 /* card prayer */
@@ -638,20 +668,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(235 82 74 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 .prayer-card:last-child {
   border-style: none;
 }
 
+@media (min-width: 768px) {
+  .prayer-card {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
 .prayer-content {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .prayer-content {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
