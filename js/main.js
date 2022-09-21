@@ -18,6 +18,8 @@ async function fetchData() {
     domGenerator(getTodayPrayers, city);
 
     return getTodayPrayers;
+  } else {
+    return "undefined";
   }
 }
 document.querySelector("#search").addEventListener("submit", async (e) => {
@@ -25,10 +27,19 @@ document.querySelector("#search").addEventListener("submit", async (e) => {
   console.log(e.target.name.value);
   city = e.target.name.value;
   const result = await fetchData();
-  document.querySelector(".card").innerHTML = "";
+  if (result === "undefined") {
+    const error = document.createElement("p");
+    error.classList.add("error");
+    error.innerHTML = "الرجاء التحقق من إسم المدينة المدخل";
+    document.querySelector(".card").innerHTML = "";
 
-  domGenerator(result, city);
-  e.target.name.value = "";
+    document.querySelector(".card").appendChild(error);
+  } else {
+    document.querySelector(".card").innerHTML = "";
+    domGenerator(result, city);
+    e.target.name.value = "";
+  }
+  console.log(result);
 });
 
 fetchData();

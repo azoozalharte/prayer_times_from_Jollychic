@@ -26,3 +26,6 @@
 .prayer-content {
   @apply font-bold text-xl md:text-3xl text-black;
 }
+.error {
+  @apply font-bold text-xl md:text-3xl text-red-400;
+}
