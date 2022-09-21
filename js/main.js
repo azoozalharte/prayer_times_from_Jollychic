@@ -17,7 +17,7 @@ req.addEventListener("readystatechange", (e) => {
 
     const cityName = document.createElement("p");
     cityName.classList.add("city-name");
-    cityName.innerHTML = "أوقات الصلاة في مدينة جدة";
+    cityName.innerHTML = "Jeddah";
     cardHeader.appendChild(cityName);
 
     const cityTime = document.createElement("p");
@@ -110,5 +110,16 @@ req.open(
   `http://api.aladhan.com/v1/calendarByCity?city=ta'if%27if&country=sa&method=${date.date()}&month=${date.month()}&year=${date.year()}`
 );
 req.send();
+
+document.querySelector("#search").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const cityData1 = getCitieNmae(e.target.name.value);
+  console.log(cityData1);
+  // req.open(
+  //   "get",
+  //   `http://api.aladhan.com/v1/calendarByCity?city=ta'if%27if&country=sa&method=${date.date()}&month=${date.month()}&year=${date.year()}`
+  // );
+  // req.send();
+});
 
 // http://api.aladhan.com/v1/calendarByCity?city=London&country=United%20Kingdom&method=2&month=04&year=2017
