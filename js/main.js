@@ -7,7 +7,7 @@ let city = "jeddah";
 
 async function fetchData() {
   const req = await fetch(
-    `http://api.aladhan.com/v1/calendarByCity?city=${city}%27if&country=sa&method=${date.date()}&month=${date.month()}&year=${date.year()}`
+    `https://api.aladhan.com/v1/calendarByCity?city=${city}%27if&country=sa&method=${date.date()}&month=${date.month()}&year=${date.year()}`
   );
 
   if (req.status === 200) {
