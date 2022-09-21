@@ -15,6 +15,7 @@ async function fetchData() {
     const getTodayPrayers = data.data.filter(
       (prayer) => prayer.date.readable.split(" ")[0] === date.date().toString()
     );
+    domGenerator(getTodayPrayers, city);
 
     return getTodayPrayers;
   }
