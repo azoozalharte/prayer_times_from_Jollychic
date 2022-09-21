@@ -24,6 +24,8 @@ document.querySelector("#search").addEventListener("submit", async (e) => {
   console.log(e.target.name.value);
   city = e.target.name.value;
   const result = await fetchData();
+  document.querySelector(".card").innerHTML = "";
+
   domGenerator(result, city);
   e.target.name.value = "";
 });
