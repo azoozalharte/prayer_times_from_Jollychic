@@ -25,6 +25,7 @@ document.querySelector("#search").addEventListener("submit", async (e) => {
   city = e.target.name.value;
   const result = await fetchData();
   domGenerator(result, city);
+  e.target.name.value = "";
 });
 
 fetchData();

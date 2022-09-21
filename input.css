@@ -8,7 +8,7 @@
 }
 
 .city-name {
-  @apply font-bold text-xl;
+  @apply font-extrabold text-7xl text-white;
 }
 
 .time {
